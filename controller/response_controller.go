@@ -3,12 +3,16 @@ package controller
 import (
 	"Explore1/model"
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
 func Response(w http.ResponseWriter, r *http.Request, req interface{}) {
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(req)
+	err := json.NewEncoder(w).Encode(req)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
 func SendErrorResponse(w http.ResponseWriter, message string) {
