@@ -20,7 +20,10 @@ func SendErrorResponse(w http.ResponseWriter, message string) {
 	response.Status = 400
 	response.Message = message
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+	err := json.NewEncoder(w).Encode(response)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
 func sendUnauthorizedResponse(w http.ResponseWriter) {
@@ -29,5 +32,8 @@ func sendUnauthorizedResponse(w http.ResponseWriter) {
 	response.Message = "Unauthorized Access"
 	w.WriteHeader(response.Status)
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+	err := json.NewEncoder(w).Encode(response)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
