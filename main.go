@@ -1,11 +1,4 @@
-// package main
-
-// import (
-// 	"Explore1/controller"
-
-// 	"github.com/go-martini/martini"
-// 	"github.com/martini-contrib/cors"
-// )
+package main
 
 // func main() {
 
