@@ -32,7 +32,7 @@ func main() {
 	})
 	m.Put("userscors/:user_id", allowCORSHandler, controller.UpdateUser)
 
-	m.Run()
-	m.RunOnAddr(":8181")
+	// m.Run()
+	// m.RunOnAddr(":8181")
 
 }
