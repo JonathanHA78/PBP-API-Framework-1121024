@@ -30,28 +30,8 @@ func main() {
 		AllowMethods: []string{"PUT"},
 		AllowHeaders: []string{"Origin"},
 	})
-	allowCORSHandler := cors.Allow(&cors.Options{
-		AllowOrigins: []string{"localhost:8181"},
-		AllowMethods: []string{"PUT"},
-		AllowHeaders: []string{"Origin"},
-	})
-	allowCORSHandler := cors.Allow(&cors.Options{
-		AllowOrigins: []string{"localhost:8181"},
-		AllowMethods: []string{"PUT"},
-		AllowHeaders: []string{"Origin"},
-	})
-	allowCORSHandler := cors.Allow(&cors.Options{
-		AllowOrigins: []string{"localhost:8181"},
-		AllowMethods: []string{"PUT"},
-		AllowHeaders: []string{"Origin"},
-	})
-	allowCORSHandler := cors.Allow(&cors.Options{
-		AllowOrigins: []string{"localhost:8181"},
-		AllowMethods: []string{"PUT"},
-		AllowHeaders: []string{"Origin"},
-	})
 	m.Put("userscors/:user_id", allowCORSHandler, controller.UpdateUser)
 
 	m.Run()
 	m.RunOnAddr(":8181")
-
+}
