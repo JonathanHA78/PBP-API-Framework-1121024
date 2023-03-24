@@ -23,7 +23,7 @@
 // 		AllowMethods: []string{"PUT"},
 // 		AllowHeaders: []string{"Origin"},
 // 	})
-// 	m.Put("userscors/:user_id", allowCORSHandler, controller.UpdateUser)
+	m.Put("userscors/:user_id", allowCORSHandler, controller.UpdateUser)
 
 	m.Run()
 	m.RunOnAddr(":8181")
